@@ -1,0 +1,27 @@
+import java.util.Random;
+
+public class jeuTP5{
+
+    static Random rand = new Random();
+
+    public static int randRange (int a, int b) {
+	return (rand.nextInt(b-a) + a); 
+    }
+    
+
+
+    public static String tirage() {
+	String tirage = "";
+
+	
+    }
+
+
+    public static void main (String[] args){
+	
+
+    }
+ 
+
+
+}
