@@ -35,7 +35,28 @@ public class Exos {
 
     /* EXERCICE 4 */
     public static int bonus(int[] temperatures) {
-	return -1;
+	int max = 1000000;
+	int vide = 0;
+	int valAbs = 0;
+	for (int i=0; i<temperatures.length; i++) {
+	    if(temperatures[i] < 0) {
+		valAbs = -temperatures[i];
+	    }
+	    else {
+		valAbs = temperatures[i];
+	    }
+
+	    if(valAbs <= max) {
+		max = valAbs;
+		if(temperatures[i] == -vide) {
+		    vide = valAbs;
+		}
+		else {
+		    vide = temperatures[i];
+		}
+	    }
+	}
+	return vide;
     }
 
     // *** Tests ***
