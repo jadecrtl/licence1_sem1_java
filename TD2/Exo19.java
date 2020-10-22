@@ -1,6 +1,6 @@
 public class Exo19 {
 
-    /*public static int f (int x, int y) {
+    public static int f (int x, int y) {
 	if (((x <= y) || (x >= y+1))) {
 	    if ((x <= y) && (x < y)) {
 		if (x < -x) {
@@ -19,23 +19,46 @@ public class Exo19 {
 	}
 	return y;
 	
-    }*/
-
-    public static int f (int x, int y) {
-	
+    }
+    //version simplifiée de f
+    public static int f2 (int x, int y) {
+	int a;
+	if (x < y) {
+	    a = x;
+	}
+	else {
+	    a = y;
+	}
+	if (a < 0) {
+	    return -a;
+	}
+	else {
+	    return a;
+	}
     }
 
+    public static void test (int a, int b) {
+	if (f(a,b) == f2(a,b)) {
+	    System.out.println("Succés pour (" + a + "," + b + ")" + f(a,b));
+	}
+	else {
+	    System.out.println("Echec pour (" + a + "," + b + ")" + f(a,b));
+	}
+    }
+    
     public static void main (String[] args) {
-	//On est censé avoir 2 comme résultat
-	System.out.println(f(-2,3));
-	//On est censé avoir 3 comme résultat
-	System.out.println(f(2,-3));
-	//On est censé avoir 2 comme résultat
-	System.out.println(f(2,3));
-	//On est censé avoir 3 comme résultat
-	System.out.println(f(-2,-3));
-	//On est censé avoir 0 comme résultat
-	System.out.println(f(0,0));
+	test(2,-3);
+	test(2,3);
+	test(-2,-3);
+	test(-2,3);
+	test(4,-3);
+	test(4,3);
+	test(-4,-3);
+	test(-4,3);
+	test(3,-3);
+	test(3,3);
+	test(-3,-3);
+	test(-3,3);
     }
 
 }
