@@ -28,21 +28,19 @@ public class Exos {
     /* EXERCICE 2 */
     
     public static void move (int[][] grid, int line, int column, int player) {
-	for (int i=0; i<=2; i++) {
-	    for (int j=0; j<=2; j++) {
-		if (grid[line][column] == 0) {
-		    grid[line][column] = player;
-		}
-		else {
-		    System.out.println("Illegal move");
-		}
-	    }
+	if (grid[line][column] == 0) {
+	    grid[line][column] = player;
+	}
+	else {
+	    System.out.println("Illegal move");
 	}
     }
+	
 
     /* EXERCICE 3 */
     // À compléter
     public static int winner (int[][] grid) {
+	
 	return 0;
     }
 /* EXERCICE 4 */
