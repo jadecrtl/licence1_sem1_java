@@ -40,14 +40,80 @@ public class Exos {
     /* EXERCICE 3 */
     // À compléter
     public static int winner (int[][] grid) {
+	//On va tester la diagonale descendante
+	System.out.println("test diag descendante");
+	if (grid[0][0]==grid[1][1] && grid[1][1]==grid[2][2]) {
+	    if (grid[0][0]+grid[1][1]+grid[2][2] == 3) {
+		return 1;
+		//Joueur X a gagné
+	    }
+	    else {
+		if (grid[0][0]+grid[1][1]+grid[2][2] == 6) {
+		     return 2;
+		    //Joueur O a gagné
+		}
+		else {
+		    return 0;
+		    //Pas de gagnant possible
+		}
+	    }
+	}
 	
+	//On va tester la diagonale ascendante
+	System.out.println("test diag ascendante");
+	if (grid[0][2]==grid[1][1] && grid[1][1]==grid[2][0]) {
+	    if (grid[0][2]+grid[1][1]+grid[2][0] == 3) {
+		return 1;
+		//Joueur X a gagné
+	    }
+	    else {
+		if (grid[0][2]+grid[1][1]+grid[2][0] == 6) {
+		    return 2;
+		    //Joueur O a gagné
+		}
+		else {
+		    return 0;
+		    //Pas de gagnant possible
+		}
+	    }
+	}
+
+
+       	//On va tester les lignes
+	System.out.println("test lignes");
+	for (int x=0; x<grid.length; x++) {
+	    if (grid[x][0]==grid[x][1] && grid[x][1]==grid[x][2]) {
+		if (grid[x][0]+grid[x][1]+grid[x][2] == 3) {
+		    return 1;
+		}
+		else {
+		    if (grid[x][0]+grid[x][1]+grid[x][2] == 6) {
+			return 2;
+		    }
+		}
+	     }
+         }
+	//On va tester les colonnes
+	System.out.println("test colonnes");
+	for (int y=0; y<grid.length; y++) {
+	    if (grid[0][y]==grid[1][y] && grid[1][y]==grid[2][y]) {
+		if (grid[0][y]+grid[1][y]+grid[2][y] == 3) {
+		    return 1;
+		}
+		else {
+		    if (grid[0][y]+grid[1][y]+grid[2][y] == 6) {
+			return 2;
+		    }
+		}
+	    }
+	}
 	return 0;
     }
-/* EXERCICE 4 */
-    // À compléter
-    public static void play(){
 
-    }
+    /* EXERCICE 4 */
+    // À compléter
+      public static void play(){
+      }
     /* affichage d'un tableau de tableaux d'entiers */
     
     public static void  printIntArrayArray (int[][] t) {
