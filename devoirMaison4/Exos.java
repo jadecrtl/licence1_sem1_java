@@ -1,13 +1,35 @@
 public class Exos {
     /* EXERCICE 1 */
-    // À compléter
+
     public static boolean isStartingGrid(int[][] grid) {
+	//Si le tableau n'est pas de longueur 2: false
+	if (grid.length != 3) {
+	    return false;
+	}
+	//Si les éléments du tableau ne sont pas de longueur 2: false
+	for (int i=0; i<=2; i++) {
+		if (grid[i].length != 3) {
+		    return false;
+		}
+	}
+	//Si on trouve une valeur différente de 0: false
+	for (int i=0; i<=2; i++) {
+	    for (int j=0; j<=2; j++) {
+		if (grid[i][j] != 0) {
+		    return false;
+		}
+		       
+	    }
+	}
+	//C'est une grille de 3.3 remplie de zéros
 	return true;
     }
+
     /* EXERCICE 2 */
-    // À compléter
+    
     public static void move (int[][] grid, int line, int column, int player) {
     }
+
     /* EXERCICE 3 */
     // À compléter
     public static int winner (int[][] grid) {
