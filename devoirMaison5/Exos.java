@@ -30,8 +30,12 @@ public class Exos {
 
     /* EXERCICE 3 */
     public static int score(String mot) {
-        /* À MODIFIER */
-        return -1;
+	int[] array = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
+	int res = 0;
+	for (int i=0; i<mot.length(); i++) {
+	    res += array[placeLettre(characterAtPos(mot,i))];
+	}
+        return res;
     }
 
     /* EXERCICE 4 */
