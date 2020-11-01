@@ -96,8 +96,8 @@ public class RandomArray {
     	int[] a = createRandomArray(n);	
     	printIntArray(a);
 	*/
-	//	printIntArray(minMaxAverage(createRandomArray(100)));
-
+	printIntArray(minMaxAverage(createRandomArray(100)));
+	printIntArray(minMaxAverage({5,6,2,0,-1,18,4}));
 	int[] a = {1,3,0,0,0,1};
 	printIntArray(occurrences(a));
 
