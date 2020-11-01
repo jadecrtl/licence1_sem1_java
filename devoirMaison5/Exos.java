@@ -19,7 +19,12 @@ public class Exos {
 
     /* EXERCICE 2 */
     public static boolean jouable(String mot, String lettres) {
-        /* À MODIFIER */
+        for (int i=0; i<mot.length(); i++) {
+	    String position = characterAtPos(mot,i);
+	    if (nbOccs(position,mot) > nbOccs(position,lettres)) {
+		return false;
+	    }
+	}
         return true;
     }
 
