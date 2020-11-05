@@ -40,8 +40,17 @@ public class Exos {
 
     /* EXERCICE 4 */
     public static String meilleurMot(String[] dictionnaire, String lettres) {
-        /* A MODIFIER */
-        return "";
+	String meilleurMot = "";
+	int n = 0;
+	for (int i=0; i<dictionnaire.length; i++) {
+	    String mot = dictionnaire[i];
+	    int score = score(mot);
+	    if (jouable(mot,lettres) && score > n) {
+		n = score;
+		meilleurMot = dictionnaire[i];
+	    }
+	}
+        return meilleurMot;
     }
 
     /* EXERCICE 5 */
