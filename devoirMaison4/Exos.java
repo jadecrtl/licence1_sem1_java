@@ -111,9 +111,36 @@ public class Exos {
     }
 
     /* EXERCICE 4 */
-    // À compléter
-      public static void play(){
-      }
+    public static void joueAuMorpion(){
+	//On decide qui joue
+	for (int i=1; i<=9; i++) {
+	    if (i%2 == 1) {
+		joueUnCoup(joueurX, grille);
+	    }
+	    else {
+		joueUnCoup(joueurO, grille);
+	    }
+	}
+    }
+
+
+
+    public static void joueUnCoup (int joueur, int[][] t) {
+	//Quelle case?
+	
+	//Case libre ou pas?
+
+	//Ecrire dans la case
+
+	//afficher la grille mise à jour
+
+	//vainqueur?
+
+
+    }
+    
+
+    
     /* affichage d'un tableau de tableaux d'entiers */
     
     public static void  printIntArrayArray (int[][] t) {
@@ -125,6 +152,33 @@ public class Exos {
 	}
     }
 
+
+    //Affichage de la grille en cours (Exo bonus)
+
+    public static void  afficheMorpion (int[][] t) {
+	for(int i=0; i<t.length; i++){
+	    System.out.println("-------------");
+	    for (int j=0; j<t[i].length; j++){
+		System.out.print("|");
+		if (t[i][j] == 0) {
+		    System.out.print(" " + " " + " ");
+		}
+		if (t[i][j] == 1) {
+		    System.out.print(" " + "X" + " ");
+		}
+		if (t[i][j] == 2) {
+		    System.out.print(" " + "O" + " ");
+		}
+	    }
+	    System.out.print("|");
+	    System.out.print("\n");
+	}
+	System.out.println("-------------");
+    }
+
+    
+    
+    
    public static void  main (String[]  args) {
       int[][] startGrid={{0,0,0},{0,0,0},{0,0,0}};
       int[][] bad1 ={{0,0,0},{0,0},{0,0,0}};
@@ -155,7 +209,9 @@ public class Exos {
       System.out.println("Ok si \"1\" est affiché");
       System.out.print("\n");
       System.out.println("Testing play");
-      play();
+      joueAuMorpion();
+
+      afficheMorpion(finale);
 
       
   }
