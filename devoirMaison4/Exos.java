@@ -113,6 +113,8 @@ public class Exos {
     /* EXERCICE 4 */
     public static void joueAuMorpion(){
 	//On decide qui joue
+	int joueurX = 1;
+	int joueurO = 2;
 	for (int i=1; i<=9; i++) {
 	    if (i%2 == 1) {
 		joueUnCoup(joueurX, grille);
@@ -127,16 +129,17 @@ public class Exos {
 
     public static void joueUnCoup (int joueur, int[][] t) {
 	//Quelle case?
-	
+
+	System.out.println ("Indiquez la ligne et la colonne à laquelle vous voulez jouer.");
+	int i = Integer.parseInt (System.console ().readline ());
+	int j = Integer.parseInt (System.console ().readline ());
 	//Case libre ou pas?
-
+	move(i,j);
 	//Ecrire dans la case
-
+	t[i][j] = 
 	//afficher la grille mise à jour
-
 	//vainqueur?
-
-
+	    winner(int[][] t);
     }
     
 
