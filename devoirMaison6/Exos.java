@@ -21,8 +21,29 @@ public class Exos {
     }
 
     /* EXERCICE 3 */
-    // public static boolean[] aux(int n, int m) {
-    // }
+    public static boolean[] aux(int n, int m) {
+	boolean[] b = new boolean[m];
+	int[] puissances2 = new int[m];
+	//On doit remplir un tableau de puissances de 2 dans l'ordre inverse de ses indices
+	int i=m-1, j=0;
+	while (i>=0) {
+	    puissances2[i]=power(2,j);
+	    i--;
+	    j++;
+	}
+	int reste = n;
+	for (int k=0; k<m; k++) {
+	    System.out.println(reste + " " + puissances2[k]);
+	    if (reste < puissances2[k]) {
+		b[k]=false;
+	    }
+	    else {
+		b[k]=true;
+		reste = reste-puissances2[k];
+	    }
+	}
+	return b;
+    }
 
     /* EXERCICE 4 */
     // public static boolean nearGray(int n, int m) {
@@ -36,7 +57,7 @@ public class Exos {
         printBooleanArray(b);
         printBooleanArray(codeGray(b));
         printBooleanArray(decodeGray(codeGray(b)));
-        //printBooleanArray(aux(3, 4));
+        printBooleanArray(aux(3, 4));
         //System.out.println(nearGray(6, 9));
         //System.out.println(nearGray(3, 5));
     }
