@@ -33,7 +33,7 @@ public class Exos {
 	}
 	int reste = n;
 	for (int k=0; k<m; k++) {
-	    System.out.println(reste + " " + puissances2[k]);
+	    //System.out.println(reste + " " + puissances2[k]);
 	    if (reste < puissances2[k]) {
 		b[k]=false;
 	    }
@@ -46,8 +46,33 @@ public class Exos {
     }
 
     /* EXERCICE 4 */
-    // public static boolean nearGray(int n, int m) {
-    // }
+    public static boolean nearGray(int n, int m) {
+	int max = 0;
+	if (n<m) {
+	    max = m;
+	}
+	else {
+	    max = n;
+	}
+	boolean[] bn = codeGray(aux(n,utilitaireAux(max)));
+	boolean[] bm = codeGray(aux(m,utilitaireAux(max)));
+	printBooleanArray(bn);
+	printBooleanArray(bm);
+	int i = 0;
+	int nbDiff = 0;
+	while (i<utilitaireAux(max)) {
+	    if (bn[i] != bm[i]) {
+		nbDiff++;
+	    }
+	    i++;
+	}
+	if (nbDiff == 1) {
+	    return true;
+	}
+	else {
+	    return false;
+	}
+    }
 
     public static void main(String[] args) {
 
@@ -58,8 +83,8 @@ public class Exos {
         printBooleanArray(codeGray(b));
         printBooleanArray(decodeGray(codeGray(b)));
         printBooleanArray(aux(3, 4));
-        //System.out.println(nearGray(6, 9));
-        //System.out.println(nearGray(3, 5));
+        System.out.println(nearGray(6, 9));
+        System.out.println(nearGray(3, 5));
     }
 
     /*************************************************************/
@@ -104,5 +129,14 @@ public class Exos {
 	    else {
 		return false;
 	    }
+    }
+
+    //Je cherche la puissance de 2 juste supérieure à l'entier passé en paramêtres
+    public static int utilitaireAux (int a) {
+	int i = 0;
+	while (a>power(2,i)) {
+	    i++;
+	}
+	return i;
     }
 }
