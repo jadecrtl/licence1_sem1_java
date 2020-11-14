@@ -1,0 +1,24 @@
+Exercice 2:
+1) Quand on tape man ls on a le nom complet de la commande ls, ce qu'elle fait
+ainsi que ses options avec la définition de chaques options.
+2) La commande ls permet de lister les répertoires et fichier dans notre
+répertoire courant.
+3) La commande ls -l permet de lister les répertoires et fichier de manière plus complète en ayant la taille du fichier ou du répertoire ainsi que sa date de
+création et les droits qu'on a dessus
+4) La commande man man nous donne le nom complet de la commande man et elle nous permet de nous expliquer comment se servir de la commande man ainsi que les
+options qu'on peut lui affilier.
+5) Elles servent à nous donner le nom, le synopsis et les paramêtres pour mieux comprendre ce qu'on manipule comme commande.
+
+Exercice 3:
+4) On constate en tapant la commande ls -l que le répertoire IP1-Java s'est crée
+7) On se trouvera de nouveau dans home comme nous le prouve pwd.
+
+Exercice 4:
+6) On observe que le fichier poeme.txt s'ouvre en arrière plan avec la commande &.
+
+Exercice 5:
+3) Le fichier Hello.java correspond à la version pas encore compilé et le
+fichier Hello.class correspond à la version compilé et éxecutable par java.
+6) Le bash nous indique un message d'erreur en nous disant qu'il manque '{' et
+oui on peut le retrouver en allant dans notre programme en allant à la ligne que le bash nous a indiqué.
+7) Il y a marqué la même erreur que précédemment.
