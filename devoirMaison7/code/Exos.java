@@ -3,20 +3,35 @@ public class Exos {
 
     /* Q1 */
     public static boolean[] initBoolArray(int n, boolean b) {
-        // À MODIFIER
-        return Correction.initBoolArray(n, b);
+        boolean[] tab = new boolean[n];
+	for (int i=0; i<n; i++) {
+	    tab[i] = b;
+	}
+	return tab;
     }
 
     /* Q2 */
     public static boolean equalsBoolArray(boolean[] t1, boolean[] t2) {
-        // À MODIFIER
-        return Correction.equalsBoolArray(t1, t2);
+	if (t1.length != t2.length) {
+	    return false;
+	}
+	for (int i=0; i<t1.length; i++) {
+	    if (t1[i] != t2[i]) {
+		return false;
+	    }
+	}
+	return true;
     }
 
     /* Q3 */
     public static int[][] transpose(int[][] S) {
-        // À MODIFIER
-        return Correction.transpose(S);
+	int[][] tab = new int[9][9];
+	for (int i=0; i<9; i++) {
+	    for (int j=0; j<9; j++) {
+		tab[i][j] = S[j][i];
+	    }
+	}
+	return tab;
     }
 
     /*** EXERCICE 2 ***/
