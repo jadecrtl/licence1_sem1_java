@@ -38,27 +38,35 @@ public class Exos {
 
     /* Q1 */
     public static boolean[] chiffresLigne(int[][] S, int i) {
-        // À MODIFIER
-        return Correction.chiffresLigne(S, i);
+        boolean[] tabInitBool = initBoolArray(10, false);
+	for (int k=0; k<9; k++) {
+	    tabInitBool[S[i][k]] = (S[i][k] != 0);
+	}
+	return tabInitBool;
     }
 
     /* Q2 */
     public static boolean[] chiffresColonne(int[][] S, int j) {
-        // À MODIFIER
-        return Correction.chiffresColonne(S, j);
+	return chiffresLigne(transpose(S),j);
     }
 
     /* Q3 */
     public static boolean[] chiffresCarre(int[][] S, int i, int j) {
-        // À MODIFIER
-        return Correction.chiffresCarre(S, i, j);
+	boolean[] tabInitBool = initBoolArray(10, false);
+	int n = i/3*3;
+	int k = j/3*3;
+	for(i=n; i<n+3; i++) {
+	    for(j=k; j<k+3; j++) {
+		tabInitBool[S[i][j]] = (S[i][j] != 0);
+	    }
+	}
+	return tabInitBool;
     }
 
     /* EXERCICE 3 */
 
     /* Q1 */
     public static boolean isSolution(int[][] S) {
-        // À MODIFIER
-        return Correction.isSolution(S);
+	
     }
 }
