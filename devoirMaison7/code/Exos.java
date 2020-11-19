@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class Exos {
     /*** EXERCICE 1 ***/
 
@@ -67,6 +68,12 @@ public class Exos {
 
     /* Q1 */
     public static boolean isSolution(int[][] S) {
-	
+	boolean[] tab = {false, true, true, true, true, true, true, true, true, true};
+	for(int i=0; i<9; i++) {
+	    if(Arrays.equals(chiffresLigne(S,i),tab) || Arrays.equals(chiffresColonne(S,i),tab) || Arrays.equals(chiffresCarre(S,i/3,3*i%9),tab)) {
+		return true;
+	    }
+	}
+	return false;
     }
 }
