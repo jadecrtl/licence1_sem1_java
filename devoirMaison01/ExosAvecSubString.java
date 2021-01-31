@@ -1,4 +1,4 @@
-public class Exos {
+public class ExosAvecSubString {
     /* EXERCICE 1 */
     public static Boolean mobileFrancaisMetropolitain(String numero) {
 	String chiffre;
